@@ -1,4 +1,4 @@
-package myexercise.model;
+package myexercise;
 
 
 import java.util.ArrayList;
