@@ -1,4 +1,4 @@
-package myexercise;
+package myexercise.model;
 
 import java.util.Scanner;
 
@@ -12,14 +12,15 @@ public class Algorithms {
         return factorial;
     }
 
-    public void findMaxValue(){
+    public void findMaxValue(int factorial){
         int res = 2;
-        int fact = factorial(2);
+        int fact = factorial;
         while (fact >= 0) {
             res++;
             fact = fact * res;
         }
-        System.out.println(res - 1);
+        res -= 1;
+        System.out.println("Max value is: " + res);
     }
 
     public boolean isPrime() {
