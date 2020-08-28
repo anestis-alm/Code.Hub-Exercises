@@ -40,7 +40,7 @@ public class Ui {
 
     private void getOption() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("\nEnter a number from menu 1-13: ");
+        System.out.print("\nEnter a number from menu 1-12: ");
         int number = Integer.parseInt(scanner.nextLine());
         while (number < 1 || number > 12) {
             System.out.print("Please enter a valid number: ");
