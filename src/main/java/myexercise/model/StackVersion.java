@@ -27,11 +27,9 @@ public class StackVersion {
             System.out.println("UnderFlow\nProgram Terminated");
             System.exit(1);
         }
-        int last_value = peek();
-        System.out.println("Removing " + peek());
+        System.out.println("Removing: " + peek() + "\nPop element is: " + peek());
         arr[top] = 0;
-
-        return last_value;
+        return arr[top--];
     }
 
     public int peek() {

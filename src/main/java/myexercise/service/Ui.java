@@ -86,7 +86,8 @@ public class Ui {
             System.out.println(arrayExercises.listOfPrime(numbersArr));
         } else if (number == 7) {
             ArrayExercises arrayExercises = new ArrayExercises();
-            arrayExercises.eliminateDuplicates();
+            List<Object> duplicates = new ArrayList<>(Arrays.asList(1, 2, "a", 1, "b", "a"));
+            arrayExercises.eliminateDuplicates(duplicates);
         } else if (number == 8) {
             ArrayExercises arrayExercises = new ArrayExercises();
             arrayExercises.descendingDig();
@@ -94,15 +95,23 @@ public class Ui {
             Scanner scanner = new Scanner(System.in);
             System.out.print("Give the integer size of stack: ");
             int stack_size = Integer.parseInt(scanner.nextLine());
-
             StackVersion stackVersion = new StackVersion(stack_size);
-
-            stackVersion.push(10);
-            stackVersion.push(20);
-
-            System.out.println("Pop element is: " + stackVersion.pop());
+            int response;
+            System.out.println("Please select\n1. Push\n2. Pop\n3. peek\n4. Exit");
+            do {
+                response = Integer.parseInt(scanner.nextLine());
+                if (response == 1) {
+                    System.out.print("Give the integer number to push: ");
+                    stackVersion.push(Integer.parseInt(scanner.nextLine()));
+                } else if (response == 2) {
+                    stackVersion.pop();
+                } else if (response == 3) {
+                    System.out.println("Peek element is: " + stackVersion.peek());
+                } else if (response > 4 || response < 1){
+                    System.out.println("Not valid option");
+                }
+            } while (response != 4);
             stackVersion.printStack();
-
         } else if (number == 10) {
             ArrayExercises arrayExercises = new ArrayExercises();
             arrayExercises.reverseStack();

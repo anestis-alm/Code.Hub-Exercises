@@ -9,7 +9,6 @@ public class PasswordGenerator {
         do {
             count = countCriteriaMatch(getString());
             printMessage(count);
-            System.out.println(count);
         } while (count < 3);
     }
 

@@ -12,7 +12,7 @@ public class Algorithms {
         return factorial;
     }
 
-    public void findMaxValue(int factorial){
+    public void findMaxValue(int factorial) {
         int res = 2;
         int fact = factorial;
         while (fact >= 0) {
@@ -68,8 +68,15 @@ public class Algorithms {
         System.out.print("Give a positive float number: ");
         float number = Float.parseFloat(scanner.nextLine());
 
-        int intPart = (int) number;
-        float decPart = number - intPart;
-        System.out.print("The decimal part is: " + decPart);
+        String new_number = String.valueOf(number);
+        String[] parts = new_number.split("\\.");
+        System.out.println("The decimal part is: 0." + parts[1]);
+
+        /*
+         Second way to calculate decimal part but prints more digits
+         int intPart = (int) number;
+         float decPart = number - intPart;
+         System.out.print("The decimal part is: " + decPart);
+*/
     }
 }
