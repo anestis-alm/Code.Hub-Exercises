@@ -53,7 +53,7 @@ public class ArrayExercises {
 
     public void descendingDig() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Give a number: ");
+        System.out.print("Give an integer number to print in descending order the digits: ");
         int input = Integer.parseInt(scanner.nextLine());
 
         List<Integer> numbers = new LinkedList<>();
@@ -94,7 +94,7 @@ Second way to resolve this exercise
 
     public boolean isSymmetric() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a string: ");
+        System.out.print("Enter a string to check if it's symmetric : ");
         String input = scanner.nextLine();
 
         /* convert string to lowercase letters and remove spaces */

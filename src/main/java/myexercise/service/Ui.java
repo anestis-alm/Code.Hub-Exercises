@@ -60,7 +60,7 @@ public class Ui {
         if (number == 1) {
             Algorithms algorithms = new Algorithms();
             Scanner scanner = new Scanner(System.in);
-            System.out.print("Give an integer number: ");
+            System.out.print("Give an integer number to calculate his factorial: ");
             int input = Integer.parseInt(scanner.nextLine());
             System.out.println("Factorial of " + input + " is: " + algorithms.factorial(input));
 
@@ -101,17 +101,16 @@ public class Ui {
             do {
                 response = Integer.parseInt(scanner.nextLine());
                 if (response == 1) {
-                    System.out.print("Give the integer number to push: ");
-                    stackVersion.push(Integer.parseInt(scanner.nextLine()));
+                    System.out.print("Type something to push: ");
+                    stackVersion.push(scanner.nextLine());
                 } else if (response == 2) {
                     stackVersion.pop();
                 } else if (response == 3) {
-                    System.out.println("Peek element is: " + stackVersion.peek());
-                } else if (response > 4 || response < 1){
+                    System.out.println("Peek -> : " + stackVersion.peek());
+                } else if (response > 4 || response < 1) {
                     System.out.println("Not valid option");
                 }
             } while (response != 4);
-            stackVersion.printStack();
         } else if (number == 10) {
             ArrayExercises arrayExercises = new ArrayExercises();
             arrayExercises.reverseStack();

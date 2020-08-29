@@ -25,7 +25,7 @@ public class Algorithms {
 
     public boolean isPrime() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Give an integer number: ");
+        System.out.print("Give an integer number to check if it's prime: ");
         int number = Integer.parseInt(scanner.nextLine());
 
         if (number <= 1)
@@ -40,7 +40,7 @@ public class Algorithms {
 
     public void series() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Give an integer number: ");
+        System.out.print("Give an integer number to calculate harmonic series: ");
         int number = Integer.parseInt(scanner.nextLine());
 
         double sum = 1;
@@ -52,7 +52,7 @@ public class Algorithms {
 
     public void digitsCount() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Give a long number: ");
+        System.out.print("Give a long number to calculate the number of his digits: ");
         long number = Long.parseLong(scanner.nextLine());
 
         int count = 0;

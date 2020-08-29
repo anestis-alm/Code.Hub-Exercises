@@ -1,44 +1,43 @@
 package myexercise.model;
 
 public class StackVersion {
-    private final int[] arr;
+    private final String[] arr;
     private int top;
     private final int capacity;
 
 
     public StackVersion(int size) {
-        arr = new int[size];
+        arr = new String[size];
         capacity = size;
         top = -1;
     }
 
-    public void push(int x) {
+    public void push(String x) {
         if (isFull()) {
-            System.out.println("OverFlow\nProgram Terminated\n");
-            System.exit(1);
+            System.out.println("Full Stack - Overflow");
+        } else {
+            System.out.println("Push -> " + x);
+            arr[++top] = x;
+            printStack();
         }
-
-        System.out.println("Inserting " + x);
-        arr[++top] = x;
     }
 
-    public int pop() {
+    public String pop() {
         if (isEmpty()) {
-            System.out.println("UnderFlow\nProgram Terminated");
-            System.exit(1);
+            System.out.println("Empty Stack - Underflow");
+            return null;
+        } else {
+            System.out.println("Pop -> " + peek());
+            arr[top] = null;
+            printStack();
+            return arr[top--];
         }
-        System.out.println("Removing: " + peek() + "\nPop element is: " + peek());
-        arr[top] = 0;
-        return arr[top--];
     }
 
-    public int peek() {
+    public String peek() {
         if (!isEmpty())
             return arr[top];
-        else
-            System.exit(1);
-
-        return -1;
+        return null;
     }
 
     public Boolean isEmpty() {
@@ -50,7 +49,12 @@ public class StackVersion {
     }
 
     public void printStack() {
-        for (int elem : arr)
-            System.out.println(elem);
+        System.out.print("[");
+        for (int i = 0; i < arr.length; i++)
+            if (i == arr.length - 1)
+                System.out.print(arr[i]);
+            else
+                System.out.print(arr[i] + ", ");
+        System.out.print("]\n");
     }
 }
